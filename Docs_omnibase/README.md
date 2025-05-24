@@ -26,7 +26,7 @@ This repository contains the ROS 2 nodes and documentation for interfacing an ST
 - [ ] Documentation of kinematics analysis/research/links/matlab_livescript
 - [ ] "Ramp" function to limit motor acceleration in stm32
 - [ ] UART RX from ESP32 of SMT32 data chunk to transmit it over wifi (with ESP32 connected to computer hotspot) 
-- [ ] Define/implement communication with S1 Driver 
+- [ ] Define/implement communication between S1 Driver and STM32
 
 ---
 
@@ -82,7 +82,7 @@ ros2 run serial_comm serial_communication
 
 ---
 
-## 📡 Topic Overview
+## 📡 Current Topic Overview
 
 | Topic Name                | Msg Type             | Description                                                                  |
 |--------------------------|----------------------|-------------------------------------------------------------------------------|
