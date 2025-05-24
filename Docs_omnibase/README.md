@@ -1,6 +1,6 @@
 # 🧭 STM32H7 Omnibase ROS2 Interface
 
-This repository contains the ROS 2 nodes and documentation for interfacing an STM32H7-based omnidirectional robot base with ROS 2 via serial communication.
+This repository contains the ROS 2 nodes and documentation for interfacing an STM32H7-based omnidirectional robot base with ROS 2 via serial communication. 
 
 ---
 
@@ -18,12 +18,15 @@ This repository contains the ROS 2 nodes and documentation for interfacing an ST
 ## ✅ To Do
 
 - [ ] Individual & simultaneous motor control tests
+- [ ] Mecanum IK and FK equations derived from general formula
 - [ ] Implementation of FSM logic for different RX "modes" in stm32 instead of receiving big data chunk
 - [ ] Adding distance sensor readings to FreeRTOS code and data readings to TX task
 - [ ] Stack overflow detection / Memory usage optimization & analysis
-- [ ] Define/implement communication with S1 Driver 
 - [ ] Code explanation markdown file
 - [ ] Documentation of kinematics analysis/research/links/matlab_livescript
+- [ ] "Ramp" function to limit motor acceleration in stm32
+- [ ] UART RX from ESP32 of SMT32 data chunk to transmit it over wifi (with ESP32 connected to computer hotspot) 
+- [ ] Define/implement communication with S1 Driver 
 
 ---
 
@@ -54,7 +57,8 @@ This repository contains the ROS 2 nodes and documentation for interfacing an ST
 | PC6  | Encoder 4 Signal A (TIM8 CH1)              |
 | PC7  | Encoder 4 Signal B (TIM8 CH2)              |
 
-📷 [Female Pins Pinout](assets/female_pins_pinout.png.png)  
+📷 **Female Pins Pinout**  
+![Female Pins Pinout](assets/female_pins_pinout.png)
 
 ---
 
@@ -109,7 +113,7 @@ ros2 run serial_comm serial_communication
 You can find the STM32CubeIDE firmware project at:
 
 👉 [GitHub Repo for STM32ubeIDE Project](https://github.com/Roger412/STM32H7_4_ENCODER_FREERTOS.git)
-- Note: Must check proper .gitignore so that it is buildable in both windows and linux installations of stm32cubeide 
+> Note: Must check proper .gitignore so that it is buildable in both windows and linux installations of stm32cubeide 
 
 ---
 
