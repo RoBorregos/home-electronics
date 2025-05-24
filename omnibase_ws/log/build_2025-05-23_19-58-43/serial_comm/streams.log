@@ -1,0 +1,37 @@
+[0.491s] Invoking command in '/home/roger/Github/home-electronics/omnibase_ws/src/serial_comm': PYTHONPATH=/home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_comm build --build-base /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build install --record /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/install.log --single-version-externally-managed install_data
+[0.689s] running egg_info
+[0.689s] creating ../../build/serial_comm/serial_comm.egg-info
+[0.690s] writing ../../build/serial_comm/serial_comm.egg-info/PKG-INFO
+[0.690s] writing dependency_links to ../../build/serial_comm/serial_comm.egg-info/dependency_links.txt
+[0.690s] writing entry points to ../../build/serial_comm/serial_comm.egg-info/entry_points.txt
+[0.690s] writing requirements to ../../build/serial_comm/serial_comm.egg-info/requires.txt
+[0.690s] writing top-level names to ../../build/serial_comm/serial_comm.egg-info/top_level.txt
+[0.690s] writing manifest file '../../build/serial_comm/serial_comm.egg-info/SOURCES.txt'
+[0.691s] reading manifest file '../../build/serial_comm/serial_comm.egg-info/SOURCES.txt'
+[0.691s] writing manifest file '../../build/serial_comm/serial_comm.egg-info/SOURCES.txt'
+[0.692s] running build
+[0.692s] running build_py
+[0.692s] creating /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build
+[0.692s] creating /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build/lib
+[0.692s] creating /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build/lib/serial_comm
+[0.692s] copying serial_comm/__init__.py -> /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build/lib/serial_comm
+[0.692s] copying serial_comm/serial_communication.py -> /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build/lib/serial_comm
+[0.692s] running install
+[0.692s] running install_lib
+[0.693s] creating /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages/serial_comm
+[0.693s] copying /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build/lib/serial_comm/__init__.py -> /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages/serial_comm
+[0.693s] copying /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build/lib/serial_comm/serial_communication.py -> /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages/serial_comm
+[0.693s] byte-compiling /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages/serial_comm/__init__.py to __init__.cpython-310.pyc
+[0.693s] byte-compiling /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages/serial_comm/serial_communication.py to serial_communication.cpython-310.pyc
+[0.695s] running install_data
+[0.695s] creating /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/share/ament_index
+[0.695s] creating /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/share/ament_index/resource_index
+[0.695s] creating /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/share/ament_index/resource_index/packages
+[0.695s] copying resource/serial_comm -> /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/share/ament_index/resource_index/packages
+[0.695s] copying package.xml -> /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/share/serial_comm
+[0.695s] running install_egg_info
+[0.696s] Copying ../../build/serial_comm/serial_comm.egg-info to /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages/serial_comm-0.0.0-py3.10.egg-info
+[0.696s] running install_scripts
+[0.711s] Installing serial_communication script to /home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/serial_comm
+[0.711s] writing list of installed files to '/home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/install.log'
+[0.736s] Invoked command in '/home/roger/Github/home-electronics/omnibase_ws/src/serial_comm' returned '0': PYTHONPATH=/home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roger/Github/home-electronics/omnibase_ws/install/serial_comm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_comm build --build-base /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/build install --record /home/roger/Github/home-electronics/omnibase_ws/build/serial_comm/install.log --single-version-externally-managed install_data
