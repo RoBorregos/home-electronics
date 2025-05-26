@@ -19,9 +19,10 @@ class SerialCommNode(Node):
         self.count = 0
 
         self.pose_names = ['x', 'y', 'phi', 'd', 'r']
-        default_gains = [1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2, 6.3, 7.1, 7.2, 7.3]
+        default_gains = [0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0]
         default_pose = [6.0, 3.0, 0.5, 1.0, 1.0]
-
+        default_velocities = [0.5, 0.6, 0.7, 0.4]
+        self.velocity_names = ['u1_desired', 'u2_desired', 'u3_desired', 'u4_desired']
         # PID gain parameters
         self.gain_names = [
             'x_kp', 'x_ki', 'x_kd',
@@ -36,10 +37,12 @@ class SerialCommNode(Node):
         # Declare all parameters
         for i, name in enumerate(self.pose_names):
             self.declare_parameter(name, default_pose[i])
+        for i, name in enumerate(self.velocity_names):
+            self.declare_parameter(name, default_velocities[i])
         for i, name in enumerate(self.gain_names):
             self.declare_parameter(name, default_gains[i])
 
-        self.message_tx = [self.get_parameter(n).value for n in self.pose_names + self.gain_names]
+        self.message_tx = [self.get_parameter(n).value for n in self.pose_names + self.velocity_names + self.gain_names]
 
         # Set parameter callback
         self.add_on_set_parameters_callback(self.update_parameters)
@@ -58,6 +61,7 @@ class SerialCommNode(Node):
         self.real_speeds_pub  = self.create_publisher(Float32MultiArray, 'stm32/real_speeds', 10)  # [φ_dot, x_dot, y_dot]
         self.odom_pub         = self.create_publisher(Float32MultiArray, 'stm32/odom', 10)         # [phi, x, y]
         self.errors_pub       = self.create_publisher(Float32MultiArray, 'stm32/errors', 10)       # [dx, dy, dphi]
+        self.u_errors_pub     = self.create_publisher(Float32MultiArray, 'stm32/u_errors', 10)     # [u_err[0], u_err[1], u_err[2],u_err[3]]
         self.ctrl_speeds_pub  = self.create_publisher(Float32MultiArray, 'stm32/ctrl_speeds', 10)  # [x_dot, y_dot, phi_dot]
         self.ctrl_u_pub       = self.create_publisher(Float32MultiArray, 'stm32/ctrl_u', 10)       # [u1, u2, u3, u4]
         self.pwm_pub          = self.create_publisher(Int32MultiArray,   'stm32/pwm', 10)          # [duty1, duty2, duty3, duty4]
@@ -77,6 +81,7 @@ class SerialCommNode(Node):
         self.omega_data = Float32MultiArray()
         self.odom_data = Float32MultiArray()
         self.errors_data = Float32MultiArray()
+        self.u_errors_data = Float32MultiArray()
         self.ctrl_speeds_data = Float32MultiArray()
         self.ctrl_u_data = Float32MultiArray()
         self.pwm_data = Int32MultiArray()
@@ -100,9 +105,12 @@ class SerialCommNode(Node):
             if param.name in self.pose_names:
                 idx = self.pose_names.index(param.name)
                 self.message_tx[idx] = param.value
+            elif param.name in self.velocity_names:
+                idx = self.velocity_names.index(param.name)
+                self.message_tx[5 + idx] = param.value
             elif param.name in self.gain_names:
                 idx = self.gain_names.index(param.name)
-                self.message_tx[5 + idx] = param.value
+                self.message_tx[9 + idx] = param.value
         return SetParametersResult(successful=True)
 
 
@@ -121,7 +129,7 @@ class SerialCommNode(Node):
                 try:
                     matches = re.findall(r'(\w+)=([-+]?\d*\.\d+|\d+)', line)
                     data = {key: float(val) for key, val in matches}
-
+                    # self.get_logger().info(f"✅ Parsed values: {data}")
                     output = f"""📥 Parsed Robot State:
     ➤ Desired Pose: x={data.get('x_desired', 0):.2f}, y={data.get('y_desired', 0):.2f}, phi={data.get('phi_desired', 0):.2f}, d={data.get('d', 0):.2f}, r={data.get('r', 0):.2f}
     ➤ IMU: roll={data.get('roll', 0):.2f}, pitch={data.get('pitch', 0):.2f}, yaw={data.get('yaw', 0):.2f}
@@ -130,6 +138,7 @@ class SerialCommNode(Node):
     ➤ Real Speeds: φ_dot={data.get('Inertial_ang_vel_calc', 0):.2f}, x_dot={data.get('Inertial_x_vel_calc', 0):.2f}, y_dot={data.get('Inertial_y_vel_calc', 0):.2f}
     ➤ Odom: φ={data.get('ODOM_phi', 0):.2f}, x={data.get('ODOM_x_pos', 0):.2f}, y={data.get('ODOM_y_pos', 0):.2f}
     ➤ Errors: dx={data.get('ODOM_Err_x', 0):.2f}, dy={data.get('ODOM_Err_y', 0):.2f}, dφ={data.get('ODOM_Err_phi', 0):.2f}
+    ➤ U_errors: u_err1={data.get('U_Err_1', 0):.2f}, u_err2={data.get('U_Err_2', 0):.2f}, u_err3={data.get('U_Err_3', 0):.2f}, u_err4={data.get('U_Err_4', 0):.2f}
     ➤ Ctrl Speeds: x_dot={data.get('Ctrl_Inertial_x_dot', 0):.2f}, y_dot={data.get('Ctrl_Inertial_y_dot', 0):.2f}, φ_dot={data.get('Ctrl_Inertial_phi_dot', 0):.2f}
     ➤ Ctrl Wheel u: u1={data.get('Ctrl_necc_u1', 0):.2f}, u2={data.get('Ctrl_necc_u2', 0):.2f}, u3={data.get('Ctrl_necc_u3', 0):.2f}, u4={data.get('Ctrl_necc_u4', 0):.2f}
     ➤ PWM: {data.get('Ctrl_duty_u1', 0):.0f}, {data.get('Ctrl_duty_u2', 0):.0f}, {data.get('Ctrl_duty_u3', 0):.0f}, {data.get('Ctrl_duty_u4', 0):.0f}
@@ -144,6 +153,7 @@ class SerialCommNode(Node):
                     self.omega_data.data = [ data.get('Enc_Wheel_Omega1', 0), data.get('Enc_Wheel_Omega2', 0), data.get('Enc_Wheel_Omega3', 0), data.get('Enc_Wheel_Omega4', 0) ]
                     self.odom_data.data = [ data.get('ODOM_phi', 0), data.get('ODOM_x_pos', 0), data.get('ODOM_y_pos', 0) ]
                     self.errors_data.data = [ data.get('ODOM_Err_x', 0), data.get('ODOM_Err_y', 0), data.get('ODOM_Err_phi', 0) ]
+                    self.u_errors_data.data = [ data.get('U_Err_1', 0), data.get('U_Err_2', 0), data.get('U_Err_3', 0), data.get('U_Err_4', 0) ]
                     self.ctrl_speeds_data.data = [ data.get('Ctrl_Inertial_x_dot', 0), data.get('Ctrl_Inertial_y_dot', 0), data.get('Ctrl_Inertial_phi_dot', 0) ]
                     self.ctrl_u_data.data = [ data.get('Ctrl_necc_u1', 0), data.get('Ctrl_necc_u2', 0), data.get('Ctrl_necc_u3', 0), data.get('Ctrl_necc_u4', 0) ]
                     self.pwm_data.data = [ int(data.get('Ctrl_duty_u1', 0)), int(data.get('Ctrl_duty_u2', 0)), int(data.get('Ctrl_duty_u3', 0)), int(data.get('Ctrl_duty_u4', 0)) ]
@@ -164,6 +174,7 @@ class SerialCommNode(Node):
                     self.omega_pub.publish(self.omega_data)
                     self.odom_pub.publish(self.odom_data)
                     self.errors_pub.publish(self.errors_data)
+                    self.u_errors_pub.publish(self.u_errors_data)
                     self.ctrl_speeds_pub.publish(self.ctrl_speeds_data)
                     self.ctrl_u_pub.publish(self.ctrl_u_data)
                     self.pwm_pub.publish(self.pwm_data)

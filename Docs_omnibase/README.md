@@ -6,6 +6,7 @@ This repository contains the ROS 2 nodes and documentation for interfacing an ST
 
 ## 📚 Contents
 
+- [Status](#-status)
 - [To Do](#-to-do)
 - [Current Pinout](#-current-pinout)
 - [Build and Usage Instructions](#-build-and-usage-instructions)
@@ -14,6 +15,9 @@ This repository contains the ROS 2 nodes and documentation for interfacing an ST
 - [Appendix](#appendix)
 
 ---
+
+## 📢 Status
+Control for one motor succesfully tested, must check PID gains & test 4 motors simultaneously
 
 ## ✅ To Do
 
@@ -27,6 +31,9 @@ This repository contains the ROS 2 nodes and documentation for interfacing an ST
 - [ ] "Ramp" function to limit motor acceleration in stm32
 - [ ] UART RX from ESP32 of SMT32 data chunk to transmit it over wifi (with ESP32 connected to computer hotspot) 
 - [ ] Define/implement communication between S1 Driver and STM32
+- [ ] Research/Analyse how to get optimal PWM frequency for motors (Bode diagram? motor time constant?)
+- [ ] Check if it's necessary to limit Integral part of PIDs even before reaching goal, to avoid overflow  
+- [ ] Check if adding first order filter to velocity readings is a good idea
 
 ---
 
