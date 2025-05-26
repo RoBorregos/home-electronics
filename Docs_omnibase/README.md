@@ -119,7 +119,7 @@ ros2 run serial_comm serial_communication
 
 You can find the STM32CubeIDE firmware project at:
 
-👉 [GitHub Repo for STM32ubeIDE Project](https://github.com/Roger412/STM32H7_4_ENCODER_FREERTOS.git)
+👉 [GitHub Repo for STM32ubeIDE Project **STM32H7_OMNIBASE_FREERTOS**](https://github.com/Roger412/STM32H7_OMNIBASE_FREERTOS.git)
 > Note: Must check proper .gitignore so that it is buildable in both windows and linux installations of stm32cubeide 
 
 ---
