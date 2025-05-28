@@ -21,7 +21,7 @@ Control for one motor succesfully tested, must check PID gains & test 4 motors s
 
 ## ✅ To Do
 
-- [ ] Individual & simultaneous motor control tests
+- [ ] Add kinematics & check why negative wheel speeds don't work
 - [ ] Mecanum IK and FK equations derived from general formula
 - [ ] Implementation of FSM logic for different RX "modes" in stm32 instead of receiving big data chunk
 - [ ] Adding distance sensor readings to FreeRTOS code and data readings to TX task
@@ -51,10 +51,10 @@ Control for one motor succesfully tested, must check PID gains & test 4 motors s
 | PE4  | H Bridge 2_IN2 (GPIO OUTPUT PP)            |
 | PE3  | H Bridge 2_IN3 (GPIO OUTPUT PP)            |
 | PE6  | H Bridge 2_IN4 (GPIO OUTPUT PP)            |
-| PA0  | H Bridge 1_PWM 1 (ENA)                     |
-| PE5  | H Bridge 1_PWM 2 (ENB)                     |
-| PB14 | H Bridge 2_PWM 1 (ENA)                     |
-| PF9  | H Bridge 2_PWM 2 (ENB)                     |
+| PA0  | H Bridge 1_PWM 1 (ENA TIM5 CH1)            |
+| PE5  | H Bridge 1_PWM 2 (ENB TIM12 CH1)           |
+| PB14 | H Bridge 2_PWM 1 (ENA TIM14 CH1)           |
+| PF9  | H Bridge 2_PWM 2 (ENB TIM15 CH1)           |
 | PE9  | Encoder 1 Signal A (TIM1 CH1)              |
 | PE11 | Encoder 1 Signal B (TIM1 CH2)              |
 | PA5  | Encoder 2 Signal A (TIM2 CH1)              |

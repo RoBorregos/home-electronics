@@ -19,7 +19,7 @@ class SerialCommNode(Node):
         self.count = 0
 
         self.pose_names = ['x', 'y', 'phi', 'd', 'r']
-        default_gains = [0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0]
+        default_gains = [0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 0.5, 0.1, 0.0, 30.5, 0.5, 1.01, 30.5, 0.5, 1.01, 30.5, 0.5, 1.01, 30.5, 0.5, 1.01,]
         default_pose = [6.0, 3.0, 0.5, 1.0, 1.0]
         default_velocities = [0.5, 0.6, 0.7, 0.4]
         self.velocity_names = ['u1_desired', 'u2_desired', 'u3_desired', 'u4_desired']
