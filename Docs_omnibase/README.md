@@ -26,14 +26,16 @@ Control for one motor succesfully tested, must check PID gains & test 4 motors s
 - [ ] Implementation of FSM logic for different RX "modes" in stm32 instead of receiving big data chunk
 - [ ] Adding distance sensor readings to FreeRTOS code and data readings to TX task
 - [ ] Stack overflow detection / Memory usage optimization & analysis
+- [ ] Rviz simulation with CAD
+- [ ] Add map context & terminal gui 
 - [ ] Code explanation markdown file
 - [ ] Documentation of kinematics analysis/research/links/matlab_livescript
 - [ ] "Ramp" function to limit motor acceleration in stm32
 - [ ] UART RX from ESP32 of SMT32 data chunk to transmit it over wifi (with ESP32 connected to computer hotspot) 
 - [ ] Define/implement communication between S1 Driver and STM32
 - [ ] Research/Analyse how to get optimal PWM frequency for motors (Bode diagram? motor time constant?)
-- [ ] Check if it's necessary to limit Integral part of PIDs even before reaching goal, to avoid overflow  
-- [ ] Check if adding first order filter to velocity readings is a good idea
+- [ ] Check if it's necessary to limit Integral part of PIDs even before reaching goal  <-- implemented, must check if limit magnitude is relevant
+- [ ] Check if adding first order filter to velocity readings is a good idea <-- Implemented, must analyze if useful
 
 ---
 
