@@ -862,6 +862,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Robolib:LMQ61460-Q1"
 			(pin_names
 				(offset 0.254)
@@ -1766,18 +1865,6 @@
 		)
 		(uuid "100c9285-f65d-4c19-8246-c0f06d556114")
 	)
-	(text "LED\nOSRAM KB TATPE1.13\nFwd 2.6V "
-		(exclude_from_sim no)
-		(at 75.692 103.632 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify left)
-		)
-		(uuid "24f270b2-c394-4181-9a95-f14c81799f3c")
-	)
 	(text "Indicator LED"
 		(exclude_from_sim no)
 		(at 19.558 97.536 0)
@@ -1826,18 +1913,6 @@
 			(justify left)
 		)
 		(uuid "315235aa-eea9-4ff0-9e97-d4168cf2f305")
-	)
-	(text "electrolytic\nsee p. 34"
-		(exclude_from_sim no)
-		(at 56.642 65.786 0)
-		(effects
-			(font
-				(size 0.8128 0.8128)
-				(thickness 0.1016)
-			)
-			(justify left)
-		)
-		(uuid "4001a568-e95b-4603-aa97-3cdf4436e3b2")
 	)
 	(text "Output EMI Filter"
 		(exclude_from_sim no)
@@ -1970,28 +2045,10 @@
 		(uuid "01407b7c-5bf4-4346-a117-3885c06f3102")
 	)
 	(junction
-		(at 48.26 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0388738c-58ca-405e-bbcd-0f3c33704db1")
-	)
-	(junction
 		(at 88.9 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23c82551-faa3-49d8-a90e-66822a79a9d3")
-	)
-	(junction
-		(at 44.45 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4f3a4f1a-c700-424f-a533-eb8cdcc960ea")
-	)
-	(junction
-		(at 54.61 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56fb6bad-8824-4fee-9595-81f380157334")
 	)
 	(junction
 		(at 35.56 38.1)
@@ -2004,12 +2061,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "68feb91a-9b9d-4356-b77b-aa8d8ab62c98")
-	)
-	(junction
-		(at 34.29 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6c3349af-8157-4934-9ac4-330aa8eab41e")
 	)
 	(junction
 		(at 43.18 25.4)
@@ -2030,34 +2081,16 @@
 		(uuid "8efa3f0b-6bf4-493a-972f-90885dfd154b")
 	)
 	(junction
-		(at 54.61 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "99598aa5-cb17-4493-a602-5db86a391f48")
-	)
-	(junction
-		(at 48.26 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9d4ed61f-c27f-4397-b0e8-a72af6583373")
-	)
-	(junction
 		(at 43.18 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a1780ae3-7422-455a-a5d1-9e0394132da2")
 	)
 	(junction
-		(at 34.29 55.88)
+		(at 48.26 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b7e65ab1-06fb-42d9-8009-fea6db6d975a")
-	)
-	(junction
-		(at 44.45 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dae756c2-be27-47af-86c6-4e4f4c0edc8c")
+		(uuid "ca8f0abb-222e-4a82-b7de-1e56b7ef246e")
 	)
 	(junction
 		(at 147.32 62.23)
@@ -2076,6 +2109,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e6eb3c93-c973-4787-97e8-96c1611afaf0")
+	)
+	(junction
+		(at 48.26 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e9d75e50-492c-4841-9ce2-68336461db8d")
 	)
 	(junction
 		(at 50.8 38.1)
@@ -2135,6 +2174,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 63.5) (xy 48.26 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24a230f5-381e-423a-985b-db52433f8c45")
+	)
+	(wire
+		(pts
 			(xy 58.42 82.55) (xy 62.23 82.55)
 		)
 		(stroke
@@ -2162,6 +2211,16 @@
 			(type default)
 		)
 		(uuid "2986be6d-62fa-4e06-a023-468a9ee34536")
+	)
+	(wire
+		(pts
+			(xy 48.26 54.61) (xy 48.26 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f27cfd0-5b69-4f72-8a65-56b54ed91c85")
 	)
 	(wire
 		(pts
@@ -2245,6 +2304,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 55.88) (xy 48.26 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53f9d569-0ba5-4b9d-a34a-11e0894f7906")
+	)
+	(wire
+		(pts
 			(xy 88.9 69.85) (xy 96.52 69.85)
 		)
 		(stroke
@@ -2265,6 +2334,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 63.5) (xy 48.26 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "590dfea2-cba6-4392-b7f5-18e0f0779443")
+	)
+	(wire
+		(pts
 			(xy 82.55 69.85) (xy 88.9 69.85)
 		)
 		(stroke
@@ -2275,13 +2354,13 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 63.5) (xy 48.26 63.5)
+			(xy 48.26 55.88) (xy 58.42 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a8b3eb0-2f39-4c16-a989-2e7268e1c136")
+		(uuid "6080ccb8-1449-4a63-bbdd-b4700ec104a1")
 	)
 	(wire
 		(pts
@@ -2295,16 +2374,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 63.5) (xy 64.77 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ba6032d-8661-48e8-ba40-7b9dd5738988")
-	)
-	(wire
-		(pts
 			(xy 82.55 58.42) (xy 82.55 52.07)
 		)
 		(stroke
@@ -2312,16 +2381,6 @@
 			(type default)
 		)
 		(uuid "6cd34908-529a-4ea7-a730-2e07090bf31d")
-	)
-	(wire
-		(pts
-			(xy 48.26 55.88) (xy 64.77 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d3fe52a-8255-49b4-b6fa-9cb70486c426")
 	)
 	(wire
 		(pts
@@ -2365,16 +2424,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 64.77) (xy 48.26 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa29a120-550a-40c6-ab50-fa02f05d4b7f")
-	)
-	(wire
-		(pts
 			(xy 35.56 35.56) (xy 35.56 38.1)
 		)
 		(stroke
@@ -2415,16 +2464,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 55.88) (xy 48.26 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc8a17c8-9650-43c0-bd61-628468ad0281")
-	)
-	(wire
-		(pts
 			(xy 172.72 83.82) (xy 172.72 85.09)
 		)
 		(stroke
@@ -2462,16 +2501,6 @@
 			(type default)
 		)
 		(uuid "cdd48beb-6eb0-430a-8d6b-32fe35d37601")
-	)
-	(wire
-		(pts
-			(xy 48.26 54.61) (xy 48.26 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d08355d0-3e98-41bf-b356-399cb0114d78")
 	)
 	(wire
 		(pts
@@ -2522,6 +2551,16 @@
 			(type default)
 		)
 		(uuid "ec763a2b-6526-4f50-900d-5a0caa5a185b")
+	)
+	(wire
+		(pts
+			(xy 48.26 63.5) (xy 58.42 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edf3625a-e852-4780-8739-4b44e93b613c")
 	)
 	(wire
 		(pts
@@ -3220,7 +3259,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22p"
+		(property "Value" "33p"
 			(at 187.96 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3440,18 +3479,19 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 64.77 59.69 0)
+		(lib_id "Mechanical:MountingHole")
+		(at 50.8 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5b66b77f-045f-4cca-a4a7-5c27cbfb7e34")
-		(property "Reference" "C10"
-			(at 67.31 58.42 0)
+		(fields_autoplaced yes)
+		(uuid "61f0e509-77c2-40c6-865a-df9f11332a92")
+		(property "Reference" "H2"
+			(at 53.34 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3461,8 +3501,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
-			(at 67.31 60.96 0)
+		(property "Value" "MountingHole"
+			(at 53.34 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3472,8 +3512,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
-			(at 65.7352 63.5 0)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+			(at 50.8 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3484,7 +3524,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 59.69 0)
+			(at 50.8 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3494,8 +3534,8 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 64.77 59.69 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 50.8 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3504,17 +3544,11 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "2"
-			(uuid "658be2ae-5428-4ebb-be91-8db07c21d5cd")
-		)
-		(pin "1"
-			(uuid "c68e85b8-19f1-4c41-a558-9ff953d1d54c")
 		)
 		(instances
 			(project "nav_power"
 				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
-					(reference "C10")
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -4190,7 +4224,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 182.372 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -4418,7 +4452,7 @@
 				)
 			)
 		)
-		(property "Value" "180"
+		(property "Value" "100"
 			(at 33.274 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4428,7 +4462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 33.02 83.058 90)
 			(hide yes)
 			(show_name no)
@@ -4571,7 +4605,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 54.61 59.69 0)
+		(at 58.42 59.69 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4581,7 +4615,7 @@
 		(dnp no)
 		(uuid "a8920234-f2e6-403d-8dbd-f505aa66a790")
 		(property "Reference" "C9"
-			(at 57.15 58.42 0)
+			(at 60.96 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4591,8 +4625,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
-			(at 57.15 60.96 0)
+		(property "Value" "47u"
+			(at 60.96 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4603,7 +4637,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
-			(at 55.5752 63.5 0)
+			(at 59.3852 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4614,7 +4648,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 59.69 0)
+			(at 58.42 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4625,7 +4659,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 54.61 59.69 0)
+			(at 58.42 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4761,7 +4795,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical"
 			(at 25.4 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -4804,6 +4838,82 @@
 			(project "nav_power"
 				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 50.8 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b87c132f-afc3-4532-8fe6-6c6c9dc658aa")
+		(property "Reference" "H3"
+			(at 53.34 111.7599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 53.34 114.2999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+			(at 50.8 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 50.8 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "nav_power"
+				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -5280,7 +5390,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 34.29 59.69 0)
+		(at 38.1 59.69 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5290,7 +5400,7 @@
 		(dnp no)
 		(uuid "d4e9441d-1d29-419d-a50b-7594fe2357df")
 		(property "Reference" "C7"
-			(at 36.83 58.42 0)
+			(at 40.64 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5300,8 +5410,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
-			(at 36.83 60.96 0)
+		(property "Value" "47u"
+			(at 40.64 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5312,7 +5422,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
-			(at 35.2552 63.5 0)
+			(at 39.0652 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5323,7 +5433,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 59.69 0)
+			(at 38.1 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5334,7 +5444,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 34.29 59.69 0)
+			(at 38.1 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5392,7 +5502,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical"
 			(at 53.34 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -5603,7 +5713,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 44.45 59.69 0)
+		(at 48.26 59.69 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5613,7 +5723,7 @@
 		(dnp no)
 		(uuid "e76e5fe1-ff14-409b-85bb-932bdc56f6b7")
 		(property "Reference" "C8"
-			(at 46.99 58.42 0)
+			(at 50.8 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5623,8 +5733,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
-			(at 46.99 60.96 0)
+		(property "Value" "47u"
+			(at 50.8 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5635,7 +5745,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
-			(at 45.4152 63.5 0)
+			(at 49.2252 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5646,7 +5756,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 59.69 0)
+			(at 48.26 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5657,7 +5767,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 44.45 59.69 0)
+			(at 48.26 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5677,6 +5787,82 @@
 			(project "nav_power"
 				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 50.8 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eff60b98-fd5e-471d-b4e0-31f4b8d74619")
+		(property "Reference" "H1"
+			(at 53.34 101.5999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 53.34 104.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+			(at 50.8 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 50.8 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "nav_power"
+				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -5872,87 +6058,6 @@
 			(project "nav_power"
 				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 24.13 59.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ffc536b2-b20b-45f6-b93a-af9b34990dfc")
-		(property "Reference" "C6"
-			(at 26.67 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "560u"
-			(at 26.67 60.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_6.3x5.4"
-			(at 25.0952 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 24.13 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 24.13 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "233c1c05-39aa-4fce-abc0-c0bb449108be")
-		)
-		(pin "1"
-			(uuid "364968cc-3834-4bd9-aa1f-21c874d12789")
-		)
-		(instances
-			(project "nav_power"
-				(path "/1e893cf1-6e69-436f-9dfe-e4a4671ca374"
-					(reference "C6")
 					(unit 1)
 				)
 			)
