@@ -1,0 +1,26 @@
+# KiCad: respaldos y archivos temporales
+*-backups/
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-bak
+*.kicad_prl
+*.lck
+~*.lck
+_autosave-*
+*.tmp
+fp-info-cache
+\#auto_saved_files\#
+
+# Salidas de fabricación (se generan desde KiCad)
+gerbers/
+fabrication/
+*.zip
+
+# Otros
+.history/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
